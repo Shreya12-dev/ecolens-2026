@@ -3,7 +3,6 @@ services:
   - type: web
     name: ecolens-frontend
     runtime: node
-    env: node
     region: oregon
     plan: free
     buildCommand: npm install && npm run build
@@ -12,16 +11,13 @@ services:
       - key: NODE_ENV
         value: production
       - key: NEXT_PUBLIC_ML_SERVER_URL
-        sync: false
-        # Set this to your Flask backend URL after deployment
-        # Example: https://ecolens-ml-backend.onrender.com
+        value: https://ecolens-ml-backend.onrender.com
     healthCheckPath: /
 
   # Backend - Flask ML Server
   - type: web
     name: ecolens-ml-backend
     runtime: python
-    env: python
     region: oregon
     plan: free
     buildCommand: pip install -r backend/ml_models/requirements.txt
@@ -30,6 +26,5 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: WAQI_API_KEY
-        sync: false
-        # Add your WAQI API key here
+        value: 0a50601262476b8362ab17999835e5667f05eede
     healthCheckPath: /health
