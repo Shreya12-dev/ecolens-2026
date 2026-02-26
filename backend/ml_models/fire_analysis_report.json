@@ -1,0 +1,430 @@
+{
+    "model_details": {
+        "name": "XGBoost Integrated Fire Predictor",
+        "period": "2017-2024",
+        "region": "Multi-Region (India)",
+        "metrics": {
+            "accuracy": 0.91,
+            "precision": 0.92,
+            "recall": 0.88,
+            "f1_score": 0.9
+        }
+    },
+    "generated_at": "2026-01-29T10:18:43.967531",
+    "regional_analysis": [
+        {
+            "region_name": "Sundarbans",
+            "coordinates": {
+                "lat": 21.94,
+                "lon": 89.18
+            },
+            "current_weather": {
+                "temp": 30.0,
+                "humidity": 60.0,
+                "wind_speed": 2.0,
+                "precipitation": 0.001
+            },
+            "current_risk_index": 0.6,
+            "status": "STABLE",
+            "monthly_forecast": [
+                {
+                    "month": "January",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 25.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "February",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 27.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "March",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 32.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "April",
+                    "year": 2026,
+                    "risk_score": 0.4,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 35.0,
+                        "rain": 0.501
+                    }
+                },
+                {
+                    "month": "May",
+                    "year": 2026,
+                    "risk_score": 20.4,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 36.0,
+                        "rain": 1.501
+                    }
+                },
+                {
+                    "month": "June",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 34.0,
+                        "rain": 5.001
+                    }
+                },
+                {
+                    "month": "July",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 30.0,
+                        "rain": 7.501
+                    }
+                },
+                {
+                    "month": "August",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 29.0,
+                        "rain": 6.001
+                    }
+                },
+                {
+                    "month": "September",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 28.0,
+                        "rain": 4.001
+                    }
+                },
+                {
+                    "month": "October",
+                    "year": 2026,
+                    "risk_score": 0.4,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 27.0,
+                        "rain": 1.001
+                    }
+                },
+                {
+                    "month": "November",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 26.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "December",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 25.0,
+                        "rain": 0.001
+                    }
+                }
+            ],
+            "historical_fire_density": 5.23
+        },
+        {
+            "region_name": "Western Ghats",
+            "coordinates": {
+                "lat": 14.0,
+                "lon": 75.0
+            },
+            "current_weather": {
+                "temp": 28.0,
+                "humidity": 60.0,
+                "wind_speed": 2.0,
+                "precipitation": 5.0
+            },
+            "current_risk_index": 0.4,
+            "status": "STABLE",
+            "monthly_forecast": [
+                {
+                    "month": "January",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 23.0,
+                        "rain": 5.0
+                    }
+                },
+                {
+                    "month": "February",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 25.0,
+                        "rain": 5.0
+                    }
+                },
+                {
+                    "month": "March",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 30.0,
+                        "rain": 5.0
+                    }
+                },
+                {
+                    "month": "April",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 33.0,
+                        "rain": 5.5
+                    }
+                },
+                {
+                    "month": "May",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 34.0,
+                        "rain": 6.5
+                    }
+                },
+                {
+                    "month": "June",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 32.0,
+                        "rain": 10.0
+                    }
+                },
+                {
+                    "month": "July",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 28.0,
+                        "rain": 12.5
+                    }
+                },
+                {
+                    "month": "August",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 27.0,
+                        "rain": 11.0
+                    }
+                },
+                {
+                    "month": "September",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 26.0,
+                        "rain": 9.0
+                    }
+                },
+                {
+                    "month": "October",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 25.0,
+                        "rain": 6.0
+                    }
+                },
+                {
+                    "month": "November",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 24.0,
+                        "rain": 5.0
+                    }
+                },
+                {
+                    "month": "December",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 23.0,
+                        "rain": 5.0
+                    }
+                }
+            ],
+            "historical_fire_density": 85.34
+        },
+        {
+            "region_name": "Central India",
+            "coordinates": {
+                "lat": 23.5,
+                "lon": 78.5
+            },
+            "current_weather": {
+                "temp": 34.0,
+                "humidity": 60.0,
+                "wind_speed": 2.0,
+                "precipitation": 0.001
+            },
+            "current_risk_index": 0.6,
+            "status": "STABLE",
+            "monthly_forecast": [
+                {
+                    "month": "January",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 29.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "February",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 31.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "March",
+                    "year": 2026,
+                    "risk_score": 20.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 36.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "April",
+                    "year": 2026,
+                    "risk_score": 20.4,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 39.0,
+                        "rain": 0.501
+                    }
+                },
+                {
+                    "month": "May",
+                    "year": 2026,
+                    "risk_score": 20.4,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 40.0,
+                        "rain": 1.501
+                    }
+                },
+                {
+                    "month": "June",
+                    "year": 2026,
+                    "risk_score": 20,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 38.0,
+                        "rain": 5.001
+                    }
+                },
+                {
+                    "month": "July",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 34.0,
+                        "rain": 7.501
+                    }
+                },
+                {
+                    "month": "August",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 33.0,
+                        "rain": 6.001
+                    }
+                },
+                {
+                    "month": "September",
+                    "year": 2026,
+                    "risk_score": 0,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 32.0,
+                        "rain": 4.001
+                    }
+                },
+                {
+                    "month": "October",
+                    "year": 2026,
+                    "risk_score": 0.4,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 31.0,
+                        "rain": 1.001
+                    }
+                },
+                {
+                    "month": "November",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 30.0,
+                        "rain": 0.001
+                    }
+                },
+                {
+                    "month": "December",
+                    "year": 2026,
+                    "risk_score": 0.6,
+                    "status": "LOW",
+                    "weather": {
+                        "temp": 29.0,
+                        "rain": 0.001
+                    }
+                }
+            ],
+            "historical_fire_density": 100.0
+        }
+    ]
+}

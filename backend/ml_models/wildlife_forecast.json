@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "model_type": "RandomForest",
+    "generated_at": "2026-01-30T10:38:09.450476",
+    "forecast_years": 10,
+    "total_species": 5
+  },
+  "forecasts": {
+    "Axis Axis": {
+      "species": "Axis Axis",
+      "forecast": [
+        {
+          "year": 2025,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2026,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2027,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2028,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2029,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2030,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2031,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2032,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2033,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2034,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        }
+      ],
+      "metrics": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "r2_score": 1.0
+      },
+      "status": "stable",
+      "trend": "upward"
+    },
+    "Crocodylus Porosus": {
+      "species": "Crocodylus Porosus",
+      "forecast": [
+        {
+          "year": 2025,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2026,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2027,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2028,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2029,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2030,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2031,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2032,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2033,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        },
+        {
+          "year": 2034,
+          "predicted_population": 97.36,
+          "confidence_lower": 82.756,
+          "confidence_upper": 111.96399999999998
+        }
+      ],
+      "metrics": {
+        "mae": 1.0480000000000005,
+        "rmse": 1.2915184861239886,
+        "r2_score": 0.9872290023734783
+      },
+      "status": "declining",
+      "trend": "upward"
+    },
+    "Panthera Tigris": {
+      "species": "Panthera Tigris",
+      "forecast": [
+        {
+          "year": 2025,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2026,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2027,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2028,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2029,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2030,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2031,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2032,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2033,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2034,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        }
+      ],
+      "metrics": {
+        "mae": 1.8040000000000007,
+        "rmse": 2.166817943436875,
+        "r2_score": 0.9865040673776193
+      },
+      "status": "stable",
+      "trend": "upward"
+    },
+    "Platanista Gangetica": {
+      "species": "Platanista Gangetica",
+      "forecast": [
+        {
+          "year": 2025,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2026,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2027,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2028,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2029,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2030,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2031,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2032,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2033,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        },
+        {
+          "year": 2034,
+          "predicted_population": 102.76,
+          "confidence_lower": 87.346,
+          "confidence_upper": 118.17399999999999
+        }
+      ],
+      "metrics": {
+        "mae": 1.8040000000000007,
+        "rmse": 2.166817943436875,
+        "r2_score": 0.9865040673776193
+      },
+      "status": "stable",
+      "trend": "upward"
+    },
+    "Varanus Salvator": {
+      "species": "Varanus Salvator",
+      "forecast": [
+        {
+          "year": 2025,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2026,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2027,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2028,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2029,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2030,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2031,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2032,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2033,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        },
+        {
+          "year": 2034,
+          "predicted_population": 100.0,
+          "confidence_lower": 85.0,
+          "confidence_upper": 114.99999999999999
+        }
+      ],
+      "metrics": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "r2_score": 1.0
+      },
+      "status": "stable",
+      "trend": "upward"
+    }
+  }
+}

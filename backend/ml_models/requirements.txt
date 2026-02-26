@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+flask
+flask-cors
+joblib
+matplotlib
+seaborn
+keras>=3.0.0
