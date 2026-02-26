@@ -1,0 +1,35 @@
+services:
+  # Frontend - Next.js Application
+  - type: web
+    name: ecolens-frontend
+    runtime: node
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_ML_SERVER_URL
+        sync: false
+        # Set this to your Flask backend URL after deployment
+        # Example: https://ecolens-ml-backend.onrender.com
+    healthCheckPath: /
+
+  # Backend - Flask ML Server
+  - type: web
+    name: ecolens-ml-backend
+    runtime: python
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/ml_models/requirements.txt
+    startCommand: gunicorn -w 2 -b 0.0.0.0:$PORT backend.ml_models.fire_service:app --chdir .
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: WAQI_API_KEY
+        sync: false
+        # Add your WAQI API key here
+    healthCheckPath: /health

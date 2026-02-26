@@ -1,9 +1,12 @@
 pandas
 numpy
 scikit-learn
+xgboost
 flask
 flask-cors
 joblib
 matplotlib
 seaborn
 keras>=3.0.0
+gunicorn
+requests

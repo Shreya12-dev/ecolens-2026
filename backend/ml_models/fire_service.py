@@ -33,7 +33,7 @@ default_report_data = {
 }
 
 # WAQI API Configuration
-WAQI_API_KEY = "0a50601262476b8362ab17999835e5667f05eede"
+WAQI_API_KEY = os.getenv("WAQI_API_KEY", "0a50601262476b8362ab17999835e5667f05eede")
 
 REGIONS = [
     {"name": "Sundarbans", "lat": 21.94, "lon": 89.18, "temp_adj": 0, "rain_adj": 0, "density": 5.23},
@@ -160,6 +160,15 @@ def generate_12_month_forecast(base_weather):
         
     return forecast
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    """Health check endpoint for Render."""
+    return json_response({
+        "status": "healthy",
+        "model_loaded": model is not None,
+        "timestamp": datetime.datetime.now().isoformat()
+    })
+
 @app.route('/predict/fire', methods=['POST'])
 def predict_fire():
     """Ad-hoc prediction endpoint."""
@@ -260,6 +269,7 @@ def get_report():
     return json_response(report)
 
 if __name__ == "__main__":
-    print("Starting Flask server on http://127.0.0.1:5000")
-    print("Available endpoints: /predict/fire (POST), /report/fire (GET)")
-    app.run(port=5000, debug=True, use_reloader=False)
+    port = int(os.getenv("PORT", 5000))
+    print(f"Starting Flask server on http://0.0.0.0:{port}")
+    print("Available endpoints: /health (GET), /predict/fire (POST), /report/fire (GET)")
+    app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
