@@ -1,22 +1,5 @@
 services:
-  # Frontend - Next.js Application
-  - type: web
-    name: ecolens-frontend
-    runtime: node
-    region: oregon
-    plan: free
-    buildCommand: npm ci && npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: NODE_VERSION
-        value: 20.11.0
-      - key: NEXT_PUBLIC_ML_SERVER_URL
-        value: https://ecolens-ml-backend.onrender.com
-    healthCheckPath: /
-
-  # Backend - Flask ML Server
+  # Backend - Flask ML Server (Render)
   - type: web
     name: ecolens-ml-backend
     runtime: python
@@ -28,5 +11,5 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: WAQI_API_KEY
-        value: 0a50601262476b8362ab17999835e5667f05eede
+        sync: false
     healthCheckPath: /health
