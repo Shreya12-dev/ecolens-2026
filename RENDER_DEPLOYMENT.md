@@ -1,18 +1,23 @@
-# EcoLens Deployment (Backend on Render + Frontend on Vercel)
+# EcoLens Deployment (Render Only)
 
-This setup deploys:
+This setup deploys both services on Render:
 - Flask ML backend on Render
-- Next.js frontend on Vercel
+- Next.js frontend on Render
 
-## 1) Deploy Backend on Render
+## 1) Deploy on Render (Blueprint)
 
 ### Option A: Blueprint (recommended)
 1. Go to Render Dashboard → New + → Blueprint.
 2. Connect your repo.
-3. Render will detect `render.yaml` and create only `ecolens-ml-backend`.
-4. Set env var:
-   - `WAQI_API_KEY` = your key
-5. Deploy and wait for healthy status.
+3. Render will detect `render.yaml` and create both services:
+  - `ecolens-ml-backend`
+  - `ecolens-frontend`
+4. Set env vars:
+  - Backend service: `WAQI_API_KEY`
+  - Frontend service: `ML_SERVER_URL`, `GEMINI_API_KEY`, `WQI_API_KEY`
+5. Set `ML_SERVER_URL` to your backend URL:
+  - `https://<your-render-backend>.onrender.com`
+6. Deploy and wait for both services to be healthy.
 
 ### Option B: Manual Web Service
 - Runtime: Python
@@ -36,22 +41,43 @@ curl https://<your-render-backend>.onrender.com/health
 
 ---
 
-## 2) Deploy Frontend on Vercel
+## 2) Manual fallback (if not using Blueprint)
 
-1. Go to Vercel Dashboard → Add New → Project.
-2. Import the same GitHub repo.
-3. Framework preset: Next.js (auto-detected).
-4. Root directory: `Ecolens_2026` (the folder that contains `package.json`).
-5. Build command: leave default (`next build`).
-6. Install command: leave default (Vercel detects lockfile).
+Create two Render Web Services manually.
 
-### Vercel Environment Variables
-Set these in Project Settings → Environment Variables:
+Frontend:
+- Runtime: Node
+- Build command:
+```bash
+npm ci && npm run build
+```
+- Start command:
+```bash
+npm start
+```
+- Health check path: `/`
+
+### Frontend Environment Variables (Render)
+Set these in frontend service env vars:
+- `NODE_ENV=production`
 - `ML_SERVER_URL=https://<your-render-backend>.onrender.com`
 - `GEMINI_API_KEY=<your_gemini_key>`
-- `WQI_API_KEY=<your_waqi_key>` (if used by Next API routes)
+- `WQI_API_KEY=<your_waqi_key>`
 
-Then redeploy from Vercel.
+Backend:
+- Runtime: Python
+- Build command:
+```bash
+pip install -r backend/ml_models/requirements.txt
+```
+- Start command:
+```bash
+gunicorn -w 2 -b 0.0.0.0:$PORT backend.ml_models.fire_service:app --chdir .
+```
+- Health check path: `/health`
+- Env vars:
+  - `PYTHON_VERSION=3.11.0`
+  - `WAQI_API_KEY=your_key`
 
 ---
 
@@ -60,14 +86,14 @@ Then redeploy from Vercel.
 Your Next API route `app/api/predict-fire/route.ts` already proxies requests via:
 - `ML_SERVER_URL`
 
-So frontend pages call `/api/predict-fire`, and Vercel server-side route calls Render backend.
+So frontend pages call `/api/predict-fire`, and Next.js server-side route calls Render backend.
 
 ---
 
 ## 4) Common issues (why it may feel slow)
 
 - Render free tier cold starts (service sleeps, first request can take 30–90s).
-- Vercel calling a cold Render backend increases latency.
+- Frontend server calling a cold Render backend increases latency.
 - Gemini API quota/rate-limit can also delay chatbot responses.
 
 To improve speed:
@@ -79,6 +105,6 @@ To improve speed:
 ## 5) Quick checklist
 
 - Render backend `/health` returns `healthy`.
-- Vercel env var `ML_SERVER_URL` points to Render URL.
+- Frontend env var `ML_SERVER_URL` points to backend Render URL.
 - Frontend redeployed after env var changes.
-- Chatbot env var `GEMINI_API_KEY` set in Vercel.
+- Chatbot env var `GEMINI_API_KEY` set in Render frontend service.

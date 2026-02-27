@@ -1,4 +1,23 @@
 services:
+  # Frontend - Next.js App (Render)
+  - type: web
+    name: ecolens-frontend
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ML_SERVER_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WQI_API_KEY
+        sync: false
+    healthCheckPath: /
+
   # Backend - Flask ML Server (Render)
   - type: web
     name: ecolens-ml-backend
